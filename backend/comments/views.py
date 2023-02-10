@@ -14,7 +14,7 @@ def get_comments_by_video_id(request):
     param = request.query_params.get('video_id')
     comments = Comment.objects.filter(video_id=param)
     serializer = CommentSerializer(comments, many=True)
-    return Response(serializer.data)
+    return Response(serializer.data, status=status.HTTP_200_OK)
 
 
 @api_view(['POST'])
