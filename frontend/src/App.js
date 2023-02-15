@@ -20,7 +20,7 @@ function App() {
       <Navbar />
       <Routes>
         <Route
-          path="/"
+          exact path="/"
           element={
             <PrivateRoute>
               <HomePage />
