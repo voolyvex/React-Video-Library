@@ -1,6 +1,7 @@
 import { useState } from "react";
 
-const useCustomForm = (initialValues = {}, onSubmit) => {
+//                    send func where used ----- = useCustomForm(sendFuncHere)
+const useCustomForm = (onSubmit, initialValues = {}) => {
   const [formData, setFormValues] = useState(initialValues);
 
   const handleInputChange = (e) => {
