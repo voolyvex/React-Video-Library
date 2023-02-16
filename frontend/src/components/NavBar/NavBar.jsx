@@ -1,12 +1,15 @@
-import React from "react";
+import React, { useState } from "react";
 import { useContext } from "react";
 import { useNavigate, Link } from "react-router-dom";
 import AuthContext from "../../context/AuthContext";
+import SearchBar from "../SearchBar/SearchBar";
 import "./NavBar.css";
 
 const Navbar = () => {
   const { logoutUser, user } = useContext(AuthContext);
   const navigate = useNavigate();
+
+
   return (
     <div className="navBar">
       <ul>
@@ -14,6 +17,9 @@ const Navbar = () => {
           <Link to="/" style={{ textDecoration: "none", color: "white" }}>
             <b>YouTube Clone</b>
           </Link>
+        </li>
+        <li>
+          <SearchBar />
         </li>
         <li>
           {user ? (
