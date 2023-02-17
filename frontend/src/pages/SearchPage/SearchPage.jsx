@@ -1,10 +1,11 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import axios from "axios";
 import { KEY } from "../../localKey";
 import useCustomForm from "../../hooks/useCustomForm"
+import SearchFeed from "../../components/SearchFeed/SearchFeed";
 
 const SearchPage = (props) => {
-    const [videos, setVideos] = useState({});
+    const [videos, setVideos] = useState([{}]);
     const [formData, handleInputChange, handleSubmit, reset] = useCustomForm(fetchVideos);
 
     async function fetchVideos(fd) {
@@ -15,7 +16,6 @@ const SearchPage = (props) => {
                 .then(response => setVideos(response.data.items));
             // console.log("Video feed:", response.data)
             console.log(formData.text)
-
         } catch (error) {
             console.log(error);
         }
@@ -34,6 +34,7 @@ const SearchPage = (props) => {
                     type='submit'
                     value="Go!" />
             </form>
+            <SearchFeed videos={videos}/>
         </div>
     )
 }
