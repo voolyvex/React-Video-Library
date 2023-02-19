@@ -17,6 +17,12 @@ const Navbar = () => {
             <b>YouTube Clone</b>
           </Link>
         </li>
+        <Link to='/'>
+          <li>Home</li>
+        </Link>
+        <Link to='/search'>
+          <li>Search</li>
+        </Link>
         <li>
           {user ? (
             <button onClick={logoutUser}>Logout</button>

@@ -1,0 +1,34 @@
+.search-page{
+    padding-left: 5%;
+    
+}
+
+.search-feed{
+    max-width: 60%;
+    display: grid;
+    place-content: left;
+    text-align: left;
+    grid-template-columns: repeat(4, 1fr);
+    column-gap: 2rem;
+    row-gap: 2rem;
+    justify-content: space-around;
+    margin: 1rem;
+    padding: 1rem;
+}
+.item{
+    text-justify:auto;
+    border: #424242;
+    border-style:groove;
+    border-radius: 6px;
+    border-width: 3px;
+    box-shadow: rgb(56, 64, 67) 3px 3px 10px;
+    background: rgb(33, 33, 32);
+    display: grid;
+    flex-direction: row;
+    flex-wrap: wrap;
+    padding: 2px;
+    color: #faf9f9;
+ 
+    
+    
+}

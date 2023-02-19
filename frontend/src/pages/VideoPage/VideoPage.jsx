@@ -1,12 +1,23 @@
-import React, { useState } from 'react';
+import React from 'react';
 import VideoPlayer from '../../components/VideoPlayer/VideoPlayer';
-import videos from '../SearchPage/SearchPage';
+import { useNavigate } from 'react-router-dom';
+import './VideoPage.css'
 
-const VideoPage = (props) => {
-    console.log(videos)
+
+
+const VideoPage = () => {
+    const navigate = useNavigate();
+
+    const handleClick = () => {
+        navigate('/search')
+    }
+
     return (
-        <div>
+        <div className='player-page'>
             <VideoPlayer />
+            <div className='button1'>
+                <button onClick={handleClick}>Back to Search</button>
+            </div>
         </div>
     )
 }

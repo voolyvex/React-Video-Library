@@ -1,0 +1,12 @@
+.player-page{
+    margin-left: 5rem;
+    width: 500px;
+    padding-left: 5%;
+    display: flex;
+    justify-content: space-around;
+    
+}
+.button1{
+    position: relative;
+    padding: 1rem;
+}

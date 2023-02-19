@@ -13,6 +13,7 @@ import VideoPage from "./pages/VideoPage/VideoPage";
 import Navbar from "./components/NavBar/NavBar";
 import Footer from "./components/Footer/Footer";
 import VideoPlayer from "./components/VideoPlayer/VideoPlayer";
+import SearchFeed from "./components/SearchFeed/SearchFeed";
 
 // Util Imports
 import PrivateRoute from "./utils/PrivateRoute";
@@ -32,8 +33,12 @@ function App() {
         />
         <Route path="/register" element={<RegisterPage />} />
         <Route path="/login" element={<LoginPage />} />
-        <Route path="/search" element={<SearchPage />} />
-        <Route path="/video" element={<VideoPage />} />
+        <Route path="/search" element={<SearchPage />} >
+          <Route path="/search/:query" element={SearchFeed}/>
+        </Route>
+        <Route path="/video" element={<VideoPage />}>
+          <Route path="/video/:videoId/:title/:description" element={<VideoPlayer />} />
+        </Route>
       </Routes>
       <Footer />
     </div>

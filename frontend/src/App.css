@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Monaco&display=swap");
 
 *,
 *::before,
@@ -10,7 +10,12 @@
 
 html {
   box-sizing: border-box;
-  font-family: "Poppins", sans-serif;
+  min-height: 10rem;
+  max-height: max-content;
+  font-family: 'Monaco', 'Open Sans', 'Public Sans', 'Helvetica', 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', sans-serif;
+  background: linear-gradient(grey, rgb(67, 70, 70), rgb(1, 1, 61), black) ;
+  background-repeat: no-repeat;
+  background-size: auto;
 }
 
 p {
@@ -38,6 +43,7 @@ button:hover {
   max-width: 600px;
   overflow: auto;
   text-align: center;
+  
 }
 
 .form {
