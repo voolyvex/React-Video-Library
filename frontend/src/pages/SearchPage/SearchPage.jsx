@@ -8,7 +8,7 @@ import '../../components/SearchFeed/SearchFeed.css'
 const SearchPage = (props) => {
     const [videos, setVideos] = useState([]);
 
-    const [formData, handleInputChange, handleSubmit, reset] = useCustomForm(fetchVideos);
+    const [formData, handleInputChange, handleSubmit] = useCustomForm(fetchVideos);
 
     async function fetchVideos(fd) {
         try {

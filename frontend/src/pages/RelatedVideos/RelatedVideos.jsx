@@ -10,15 +10,15 @@ const RelatedVideos = () => {
 
     useEffect(() => {
         console.log('is useEffect hook');
-          getRelatedVideos();
-        
-      },[]);
+        getRelatedVideos();
+
+    }, []);
 
     async function getRelatedVideos() {
         try {
             await axios
                 .get(
-                    `https://www.googleapis.com/youtube/v3/search?type=video&relatedToVideoId=${videoId}&part=snippet&key=AIzaSyCVpaCOK8rYM9_3_-38P-6tQyzl6zb8qgE`)
+                    `https://www.googleapis.com/youtube/v3/search?type=video&relatedToVideoId=${videoId}&part=snippet&key=AIzaSyCVpaCOK8rYM9_3_-38P-6tQyzl6zb8qgE&maxResults=5`)
                 .then(response => setRelatedVideos(response.data.items));
         } catch (error) {
             console.log(error);
@@ -27,7 +27,7 @@ const RelatedVideos = () => {
 
     return (
         <div>
-            <RelatedFeed relatedVideos={relatedVideos}/>
+            <RelatedFeed relatedVideos={relatedVideos} />
         </div>
     )
 }
