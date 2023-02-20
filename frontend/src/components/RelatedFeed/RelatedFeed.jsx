@@ -1,12 +1,11 @@
 import React from 'react';
 import { useNavigate, Link } from 'react-router-dom';
-import './SearchFeed.css'
+import '../SearchFeed/SearchFeed.css'
 import { BsCaretRightFill } from "react-icons/bs";
 
 
 
-
-const SearchFeed = ({videos}) => {
+const RelatedFeed = ({relatedVideos}) => {
     const navigate = useNavigate();
 
     const handleClick = () => {
@@ -14,10 +13,11 @@ const SearchFeed = ({videos}) => {
     }
 
     return (
-        <div className='search-feed'>
-            
-            {videos.map((video, index) =>
-                <Link to={`/video/${videos[index].id.videoId}/${videos[index].snippet.title}`}>
+        <div >
+            {console.log("Realted videos", relatedVideos)}
+            <h1>This is Related Content</h1>
+            {relatedVideos && relatedVideos.map((video, index) =>
+                <Link to={`/video/${relatedVideos[index].id.videoId}/${relatedVideos[index].snippet.title}`}>
                 <div className='item' onClick={handleClick} title={video.snippet.title}>
                     <img width='250px' src={video.snippet.thumbnails.medium.url} alt={video.snippet.description}/>
                     <BsCaretRightFill className='icon'/>
@@ -25,7 +25,8 @@ const SearchFeed = ({videos}) => {
                 </div>
                 </Link>
             )}
+
         </div>
     )
 }
-export default SearchFeed;
+export default RelatedFeed;

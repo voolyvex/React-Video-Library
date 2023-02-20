@@ -1,6 +1,7 @@
 .search-page{
     padding-left: 5%;
     
+    
 }
 
 .search-feed{
@@ -16,19 +17,27 @@
     padding: 1rem;
 }
 .item{
-    text-justify:auto;
-    border: #424242;
-    border-style:groove;
-    border-radius: 6px;
-    border-width: 3px;
-    box-shadow: rgb(56, 64, 67) 3px 3px 10px;
-    background: rgb(33, 33, 32);
-    display: grid;
-    flex-direction: row;
+    border: rgb(60, 60, 60);
+    border-style:ridge;
+    border-radius: 3px;
+    border-width: 2px;
+    box-shadow: rgb(42, 42, 42) 3px 3px 9px;
+    background: linear-gradient(to top right, silver, rgb(59, 53, 53), rgb(57, 55, 55), rgb(64, 64, 64), rgb(10, 58, 84), black, rgb(130, 177, 177), black,  rgb(203, 154, 106));
+    background-color: rgb(121, 95, 105);
+    background-blend-mode:hue;
+    display: flex;
+    justify-content:space-between;
     flex-wrap: wrap;
-    padding: 2px;
+    word-break: keep-all;
+    word-wrap: normal;
+    padding: 1rem;
     color: #faf9f9;
- 
+    min-height: 220px;
+    max-height: fit-content;
+    width: 324px;
+    text-align-last: left;
     
-    
+}
+.icon {
+    color: rgb(208, 132, 55);
 }

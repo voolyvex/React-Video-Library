@@ -14,14 +14,14 @@ const Navbar = () => {
       <ul>
         <li className="brand">
           <Link to="/" style={{ textDecoration: "none", color: "white" }}>
-            <b>YouTube Clone</b>
+            <b>React Video Library</b>
           </Link>
         </li>
-        <Link to='/'>
-          <li>Home</li>
+        <Link to='/' style={{ textDecoration: "none", color: "white" }}>
+          <li className="navlinks">Home</li>
         </Link>
-        <Link to='/search'>
-          <li>Search</li>
+        <Link to='/search' style={{ textDecoration: "none", color: "white" }}>
+          <li className="navlinks">Search</li>
         </Link>
         <li>
           {user ? (

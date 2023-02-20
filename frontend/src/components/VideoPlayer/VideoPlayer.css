@@ -1,7 +1,8 @@
 .desc{
-    
     max-width: inherit;
     flex-wrap: wrap;
     word-wrap: normal;
-    color: whitesmoke;
+    color:rgb(208, 198, 198);
+    text-shadow: rgb(55, 55, 55) 3px 3px 5px;
+    padding-top: .5em;
 }
