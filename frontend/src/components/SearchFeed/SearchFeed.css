@@ -1,7 +1,33 @@
 .search-page {
   padding-left: 5%;
 }
-
+.search-form-container{
+  display: inline;
+  line-height: 20px;
+  font-size: 22px;
+  text-align: left;
+}
+.search-form{
+  line-height: 20px;
+  padding-left: 1.5px;
+  border-radius: 1px;
+  border-style: hidden;
+  margin-bottom: 1px;
+}
+.search-button{
+  color: midnightblue;
+  line-height: 20px;
+  padding: 0%;
+  vertical-align:bottom;
+  padding-top: 1px;
+  height: 22px;
+  margin-left: 5px;
+  margin-top: 1px;
+  box-shadow: 1px 2px 5px rgb(151, 146, 141);
+}
+.search-button:hover{
+  color:white;
+}
 .search-feed {
   max-width: 60%;
   display: grid;
@@ -13,14 +39,17 @@
   justify-content: space-around;
   margin: 1rem;
   padding: 1rem;
+  grid-auto-flow: row;
 }
 .item {
-  font-variant-caps: all-petite-caps;
-  border: rgb(60, 60, 60);
-  border-style: ridge;
-  border-radius: 3px;
-  border-width: 2px;
-  box-shadow: rgb(42, 42, 42) 3px 3px 9px;
+  border: rgb(41, 51, 60);
+  border-style:outset;
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 2px;
+  border-top-left-radius: 2px;
+  border-bottom-left-radius: 10px;
+  border-width: 3px;
+  box-shadow: rgb(41, 51, 60) 2px 3px 6px;
   background: linear-gradient(
     to top right,
     silver,
@@ -36,6 +65,7 @@
   background-color: rgb(121, 95, 105);
   background-blend-mode: hue;
   display: flex;
+  row-gap: 3px;
   justify-content: space-between;
   flex-wrap: wrap;
   word-break: keep-all;
@@ -48,25 +78,28 @@
   text-align-last: left;
 }
 .icon {
-  color: rgb(205, 136, 67);
+  color: rgb(223, 130, 36);
 }
 .rel-feed-container {
-    justify-content: space-between;
-    flex-wrap: wrap;
+  display: grid;
+  row-gap: 5px;
 }
 .rel-title {
-    text-shadow: rgb(205, 136, 67) 1px 1px 2px;
+  font-variant-caps: titling-caps;
+  text-shadow: rgb(202, 154, 105) 1px 1px 3px;
   text-align: left;
   font-kerning: none;
   font-size: x-large;
   text-align: center;
-  opacity: 60%;
+  opacity: 70%;
   width: 320px;
-  padding-bottom: 4px;
+  padding: 4px;
+  margin-bottom: 2px;
   border-width: 2px;
   border-style: none;
   color: #4682b4;
   border-color: #4682b4;
-  border-bottom-left-radius: 23px;
+  border-bottom-left-radius: 28px;
+  border-top-right-radius: 10px;
   background: linear-gradient(to bottom right, lightgrey, grey);
 }

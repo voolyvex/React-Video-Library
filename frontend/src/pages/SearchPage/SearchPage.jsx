@@ -3,10 +3,11 @@ import axios from "axios";
 import { KEY } from "../../localKey";
 import SearchFeed from "../../components/SearchFeed/SearchFeed";
 import '../../components/SearchFeed/SearchFeed.css'
+import { HiArrowNarrowRight } from "react-icons/hi";
 
 const SearchPage = (props) => {
     const [videos, setVideos] = useState([]);
-    const [searchTerm, setSearchTerm] = useState("pinnocchio");
+    const [searchTerm, setSearchTerm] = useState("scenic");
     const handleSubmit = (e) => {
         e.preventDefault()
         fetchVideos(searchTerm);
@@ -26,15 +27,15 @@ const SearchPage = (props) => {
     return (
         <div className="search-page">
             <h1>Start your search here</h1>
-            <form onSubmit={(e) => handleSubmit(e)}>
-                <input
-                    type='text'
-                    onChange={(e) => setSearchTerm(e.target.value)}
-                    value={searchTerm} required={true} />
-                <input
-                    type='submit'
-                    value="Go!" />
-            </form>
+            <div className="search-form-container">
+                <form onSubmit={(e) => handleSubmit(e)}>
+                    <input className="search-form"
+                        type='text'
+                        onChange={(e) => setSearchTerm(e.target.value)}
+                        value={searchTerm} required={true} />
+                    <button className="search-button" type='submit'><HiArrowNarrowRight className="arrow"/> </button>
+                </form>
+            </div>
             <SearchFeed videos={videos} />
         </div>
     )

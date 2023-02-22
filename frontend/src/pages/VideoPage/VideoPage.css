@@ -14,10 +14,12 @@
     padding-left: .5rem;
     position: relative;
 }
+.back-button{
+    box-shadow: 1px 2px 5px rgb(151, 146, 141);
+}
 
 .related-videos{
-    font-style: normal;
-    font-variant-caps: all-petite-caps;
+    
     padding-inline: auto;
     width: fit-content;  
 }

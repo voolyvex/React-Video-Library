@@ -12,7 +12,7 @@ const RelatedFeed = ({ relatedVideos }) => {
     }
 
     return (
-        <div >
+        <div className='rel-feed-container'>
             <h1 className='rel-title'>Related Videos</h1>
             {relatedVideos && relatedVideos.map((video, index) =>
                 <Link to={`/video/${relatedVideos[index].id.videoId}/${relatedVideos[index].snippet.title}`}>
