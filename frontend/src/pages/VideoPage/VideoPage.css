@@ -16,8 +16,8 @@
 }
 
 .related-videos{
-    font-style: oblique;
-    font-variant-caps: all-small-caps;
+    font-style: normal;
+    font-variant-caps: all-petite-caps;
     padding-inline: auto;
     width: fit-content;  
 }

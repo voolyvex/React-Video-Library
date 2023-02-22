@@ -48,22 +48,25 @@
   text-align-last: left;
 }
 .icon {
-  color: rgb(208, 132, 55);
+  color: rgb(205, 136, 67);
+}
+.rel-feed-container {
+    justify-content: space-between;
+    flex-wrap: wrap;
 }
 .rel-title {
+    text-shadow: rgb(205, 136, 67) 1px 1px 2px;
   text-align: left;
   font-kerning: none;
   font-size: x-large;
   text-align: center;
   opacity: 60%;
-  width: 15rem;
-  padding-bottom: 2px;
+  width: 320px;
+  padding-bottom: 4px;
   border-width: 2px;
-  border-style: dotted;
-  color: #4682B4;
-  border-color: #4682B4;
-  border-bottom-left-radius: 22px;
-  background:linear-gradient(to bottom right, lightgrey, grey);
-  
-  
+  border-style: none;
+  color: #4682b4;
+  border-color: #4682b4;
+  border-bottom-left-radius: 23px;
+  background: linear-gradient(to bottom right, lightgrey, grey);
 }
