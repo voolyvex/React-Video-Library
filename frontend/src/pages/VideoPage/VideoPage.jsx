@@ -3,6 +3,7 @@ import VideoPlayer from '../../components/VideoPlayer/VideoPlayer';
 import { useNavigate } from 'react-router-dom';
 import './VideoPage.css'
 import RelatedVideos from '../RelatedVideos/RelatedVideos';
+import Comments from '../../components/Comments/GetVideoComments';
 
 
 
@@ -21,6 +22,9 @@ const VideoPage = () => {
                 <div className='button1'>
                     <button onClick={handleClick}>Back to Search</button>
                 </div>
+            </div>
+            <div className='comments'>
+                <Comments />
             </div>
             <div className='related-videos'>
                 <RelatedVideos />

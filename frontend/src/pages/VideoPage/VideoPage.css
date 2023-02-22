@@ -19,6 +19,10 @@
     font-style: oblique;
     font-variant-caps: all-small-caps;
     padding-inline: auto;
-    width: fit-content;
-    
+    width: fit-content;  
+}
+
+.comments{
+    display: grid;
+    grid-column: auto;
 }

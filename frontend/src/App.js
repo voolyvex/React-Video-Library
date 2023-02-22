@@ -9,6 +9,7 @@ import RegisterPage from "./pages/RegisterPage/RegisterPage";
 import SearchPage from "./pages/SearchPage/SearchPage";
 import VideoPage from "./pages/VideoPage/VideoPage";
 import RelatedVideos from "./pages/RelatedVideos/RelatedVideos";
+import CommentPage from "./pages/CommentPage/CommentPage"
 
 // Component Imports
 import Navbar from "./components/NavBar/NavBar";
@@ -16,17 +17,20 @@ import Footer from "./components/Footer/Footer";
 import SearchFeed from "./components/SearchFeed/SearchFeed";
 import VideoPlayer from "./components/VideoPlayer/VideoPlayer";
 import RelatedFeed from "./components/RelatedFeed/RelatedFeed";
+import GetVideoComments from "./components/Comments/GetVideoComments";
+import PostUserCommentForm from "./components/Comments/PostUserCommentForm";
+import DisplayCommentFeed from "./components/Comments/DisplayCommentFeed";
 
 // Util Imports
 import PrivateRoute from "./utils/PrivateRoute";
+
 
 function App() {
   return (
     <div>
       <Navbar />
       <Routes>
-        <Route
-          path="/"
+        <Route path="/" exact
           element={
             <PrivateRoute>
               <HomePage />
@@ -42,11 +46,16 @@ function App() {
 
         <Route path="/video" element={<VideoPage />}>
           <Route path="/video/:videoId/:title" element={<VideoPlayer />} />
+          <Route path="/video/:videoId" element={
+            <PrivateRoute>
+              <CommentPage />
+            </PrivateRoute>
+          }/>
         </Route>
-
         <Route path="/video/:videoId" element={<RelatedVideos />}>
           <Route path="/video/:videoId" element={<RelatedFeed />} />
         </Route>
+
       </Routes>
       <Footer />
     </div>
