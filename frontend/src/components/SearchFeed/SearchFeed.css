@@ -1,43 +1,58 @@
-.search-page{
-    padding-left: 5%;
-    
-    
+.search-page {
+  padding-left: 5%;
 }
 
-.search-feed{
-    max-width: 60%;
-    display: grid;
-    place-content: left;
-    text-align: left;
-    grid-template-columns: repeat(4, 1fr);
-    column-gap: 2rem;
-    row-gap: 2rem;
-    justify-content: space-around;
-    margin: 1rem;
-    padding: 1rem;
+.search-feed {
+  max-width: 60%;
+  display: grid;
+  place-content: left;
+  text-align: left;
+  grid-template-columns: repeat(4, 1fr);
+  column-gap: 2rem;
+  row-gap: 2rem;
+  justify-content: space-around;
+  margin: 1rem;
+  padding: 1rem;
 }
-.item{
-    border: rgb(60, 60, 60);
-    border-style:ridge;
-    border-radius: 3px;
-    border-width: 2px;
-    box-shadow: rgb(42, 42, 42) 3px 3px 9px;
-    background: linear-gradient(to top right, silver, rgb(59, 53, 53), rgb(57, 55, 55), rgb(64, 64, 64), rgb(10, 58, 84), black, rgb(130, 177, 177), black,  rgb(203, 154, 106));
-    background-color: rgb(121, 95, 105);
-    background-blend-mode:hue;
-    display: flex;
-    justify-content:space-between;
-    flex-wrap: wrap;
-    word-break: keep-all;
-    word-wrap: normal;
-    padding: 1rem;
-    color: #faf9f9;
-    min-height: 220px;
-    max-height: fit-content;
-    width: 324px;
-    text-align-last: left;
-    
+.item {
+  font-variant-caps: all-petite-caps;
+  border: rgb(60, 60, 60);
+  border-style: ridge;
+  border-radius: 3px;
+  border-width: 2px;
+  box-shadow: rgb(42, 42, 42) 3px 3px 9px;
+  background: linear-gradient(
+    to top right,
+    silver,
+    rgb(59, 53, 53),
+    rgb(57, 55, 55),
+    rgb(64, 64, 64),
+    rgb(10, 58, 84),
+    black,
+    rgb(130, 177, 177),
+    black,
+    rgb(203, 154, 106)
+  );
+  background-color: rgb(121, 95, 105);
+  background-blend-mode: hue;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  word-break: keep-all;
+  word-wrap: normal;
+  padding: 1rem;
+  color: #faf9f9;
+  min-height: 220px;
+  max-height: fit-content;
+  width: 324px;
+  text-align-last: left;
 }
 .icon {
-    color: rgb(208, 132, 55);
+  color: rgb(208, 132, 55);
+}
+.rel-title {
+  text-align: left;
+  opacity: 50%;
+  width: 15rem;
+  padding-bottom: 2px;
 }

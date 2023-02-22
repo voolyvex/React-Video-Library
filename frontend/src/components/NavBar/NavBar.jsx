@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import { useContext } from "react";
 import { useNavigate, Link } from "react-router-dom";
 import AuthContext from "../../context/AuthContext";
@@ -23,6 +23,11 @@ const Navbar = () => {
         <Link to='/search' style={{ textDecoration: "none", color: "white" }}>
           <li className="navlinks">Search</li>
         </Link>
+        <li className="loggedin">
+          {user ? (
+          <h6 style={{textDecoration: "none", color: "black", opacity: "66%", paddingright: "1em"}}>Logged in as <h4 style={{color: "darkblue"}}>{user.username}</h4>
+          </h6>):("")}
+        </li>
         <li>
           {user ? (
             <button onClick={logoutUser}>Logout</button>

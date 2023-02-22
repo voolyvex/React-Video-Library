@@ -1,13 +1,24 @@
 .player-page{
-    margin-left: 5rem;
-    width: 500px;
-    padding-left: 5%;
+    margin-left: auto;
+    padding-left: auto;
     display: flex;
     justify-content: space-around;
-    
-    
+}
+
+.player{
+    display: flex;
+    padding-inline: auto;
+    width: 650px;
 }
 .button1{
+    padding-left: .5rem;
     position: relative;
-    padding-left: 1rem;
+}
+
+.related-videos{
+    font-style: oblique;
+    font-variant-caps: all-small-caps;
+    padding-inline: auto;
+    width: fit-content;
+    
 }

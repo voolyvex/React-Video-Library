@@ -36,18 +36,17 @@ function App() {
         <Route path="/register" element={<RegisterPage />} />
         <Route path="/login" element={<LoginPage />} />
 
-        <Route path="/search" element={<SearchPage />} >
-          <Route path="/search" element={SearchFeed}/>
+        <Route path="/search" element={<SearchPage />}>
+          <Route path="/search" element={<SearchFeed />} />
         </Route>
 
-        <Route path="/video" element={<VideoPage />} >
+        <Route path="/video" element={<VideoPage />}>
           <Route path="/video/:videoId/:title" element={<VideoPlayer />} />
         </Route>
 
-        <Route path="/video/:videoId" element={<RelatedVideos />} >
-          <Route path="/video/:videoId" element={RelatedFeed} />
+        <Route path="/video/:videoId" element={<RelatedVideos />}>
+          <Route path="/video/:videoId" element={<RelatedFeed />} />
         </Route>
-
       </Routes>
       <Footer />
     </div>

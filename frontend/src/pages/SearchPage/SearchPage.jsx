@@ -1,20 +1,22 @@
 import React, { useState } from "react";
 import axios from "axios";
 import { KEY } from "../../localKey";
-import useCustomForm from "../../hooks/useCustomForm"
 import SearchFeed from "../../components/SearchFeed/SearchFeed";
 import '../../components/SearchFeed/SearchFeed.css'
 
 const SearchPage = (props) => {
     const [videos, setVideos] = useState([]);
+    const [searchTerm, setSearchTerm] = useState("pinnocchio");
+    const handleSubmit = (e) => {
+        e.preventDefault()
+        fetchVideos(searchTerm);
+    }
 
-    const [formData, handleInputChange, handleSubmit] = useCustomForm(fetchVideos);
-
-    async function fetchVideos(fd) {
+    async function fetchVideos(text) {
         try {
             await axios
                 .get(
-                    `https://www.googleapis.com/youtube/v3/search?q=${fd.text}&key=${KEY}&part=snippet&type=video&maxResults=10`)
+                    `https://www.googleapis.com/youtube/v3/search?q=${text}&key=${KEY}&part=snippet&type=video&maxResults=12`)
                 .then(response => setVideos(response.data.items));
         } catch (error) {
             console.log(error);
@@ -27,14 +29,13 @@ const SearchPage = (props) => {
             <form onSubmit={(e) => handleSubmit(e)}>
                 <input
                     type='text'
-                    name='text'
-                    onChange={(e) => handleInputChange(e)}
-                    value={formData.text} required={true} />
+                    onChange={(e) => setSearchTerm(e.target.value)}
+                    value={searchTerm} required={true} />
                 <input
                     type='submit'
                     value="Go!" />
             </form>
-            <SearchFeed videos={videos}/>
+            <SearchFeed videos={videos} />
         </div>
     )
 }

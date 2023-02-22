@@ -16,12 +16,15 @@ const VideoPage = () => {
 
     return (
         <div className='player-page'>
-            <VideoPlayer />
-            <div className='button1'>
-                <button onClick={handleClick}>Back to Search</button>
+            <div className='player'>
+                <VideoPlayer />
+                <div className='button1'>
+                    <button onClick={handleClick}>Back to Search</button>
+                </div>
             </div>
-
-            <RelatedVideos/>
+            <div className='related-videos'>
+                <RelatedVideos />
+            </div>
         </div>
     )
 }

@@ -1,7 +1,9 @@
 import React, { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
+import {KEY} from '../../localKey'
 import RelatedFeed from '../../components/RelatedFeed/RelatedFeed';
 import axios from 'axios';
+import '../VideoPage/VideoPage.css'
 
 
 const RelatedVideos = () => {
@@ -9,24 +11,22 @@ const RelatedVideos = () => {
     const { videoId } = useParams()
 
     useEffect(() => {
-        console.log('is useEffect hook');
+
+        async function getRelatedVideos() {
+            try {
+                await axios
+                    .get(
+                        `https://www.googleapis.com/youtube/v3/search?type=video&relatedToVideoId=${videoId}&part=snippet&key=${KEY}&maxResults=7`)
+                    .then(response => setRelatedVideos(response.data.items));
+            } catch (error) {
+                console.log(error);
+            }
+        };
         getRelatedVideos();
-
-    }, []);
-
-    async function getRelatedVideos() {
-        try {
-            await axios
-                .get(
-                    `https://www.googleapis.com/youtube/v3/search?type=video&relatedToVideoId=${videoId}&part=snippet&key=AIzaSyCVpaCOK8rYM9_3_-38P-6tQyzl6zb8qgE&maxResults=5`)
-                .then(response => setRelatedVideos(response.data.items));
-        } catch (error) {
-            console.log(error);
-        }
-    };
+    }, [videoId]);
 
     return (
-        <div>
+        <div className='related-videos'>
             <RelatedFeed relatedVideos={relatedVideos} />
         </div>
     )
