@@ -9,12 +9,14 @@ const DisplayCommentFeed = ({ comments }) => {
 
     return (
         <div>
+            {console.log(comments)}
             {comments && comments
-            .filter(comment => (comment.video_id === videoId))
-            .map((comment, index) => {
-                <div>
-                    {comment[index].user.last_name}
-                    {comment[index].text}
+            .map((comment) => {
+                <div key={comment.id}>
+                 
+                    <h1>
+                        {comment.text}
+                    </h1>
                 </div> 
         }
 

@@ -18,7 +18,7 @@ const PostUserCommentForm = () => {
         postUserComment(videoId, commentString);
         }
 
-    async function postUserComment({videoId}, userComment) {
+    async function postUserComment(videoId, userComment) {
 
         let newCommentObject = {
             video_id: videoId,
@@ -30,6 +30,7 @@ const PostUserCommentForm = () => {
             
         } catch (error) {
         console.log(error)
+        console.log(token)
         }
     };
 
