@@ -22,6 +22,7 @@ const SearchFeed = ({videos}) => {
                     <img width='250px' src={video.snippet.thumbnails.medium.url} alt={video.snippet.description}/>
                     <BsCaretRightFill className='icon'/>
                     {video.snippet.title}
+    
                 </div>
                 </Link>
             )}

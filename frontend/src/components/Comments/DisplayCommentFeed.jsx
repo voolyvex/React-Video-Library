@@ -1,23 +1,24 @@
 import React from 'react';
 import { useParams } from 'react-router-dom';
 
-const DisplayCommentFeed = ({commentFeed}) => {
+const DisplayCommentFeed = ({ comments }) => {
+    
     const {videoId} = useParams();
+
+    console.log("Log:", {comments})
+
     return (
         <div>
-        
-        {commentFeed && commentFeed.filter(comment => (comment.video_id === {videoId}))
-        
-        .map((comment, index=commentFeed.id) => 
-            {
-                return <p>
-                    {comment.user.last_name}
-                    {commentFeed[index].text}
-                </p>;
-            }
+            {comments && comments
+            .filter(comment => (comment.video_id === videoId))
+            .map((comment, index) => {
+                <div>
+                    {comment[index].user.last_name}
+                    {comment[index].text}
+                </div> 
+        }
 
-        )}
-        
+        )};
         </div>
     )
 }

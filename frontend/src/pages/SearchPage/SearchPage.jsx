@@ -13,11 +13,11 @@ const SearchPage = (props) => {
         fetchVideos(searchTerm);
     }
 
-    async function fetchVideos(text) {
+    async function fetchVideos(searchTerm) {
         try {
             await axios
                 .get(
-                    `https://www.googleapis.com/youtube/v3/search?q=${text}&key=${KEY}&part=snippet&type=video&maxResults=12`)
+                    `https://www.googleapis.com/youtube/v3/search?q=${searchTerm}&key=${KEY}&part=snippet&type=video&maxResults=12`)
                 .then(response => setVideos(response.data.items));
         } catch (error) {
             console.log(error);
