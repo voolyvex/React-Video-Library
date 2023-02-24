@@ -1,5 +1,12 @@
 .search-page {
-  padding-left: 5%;
+  padding-left: auto;
+  margin-left: 5%;
+}
+.search-title{
+  width: 100%;
+  text-align: left;
+  margin: auto;
+  padding: auto;
 }
 .search-form-container{
   display: inline;
@@ -29,7 +36,7 @@
   color:white;
 }
 .search-feed {
-  max-width: 60%;
+  max-width: 70%;
   display: grid;
   place-content: left;
   text-align: left;
@@ -76,6 +83,11 @@
   max-height: fit-content;
   width: 324px;
   text-align-last: left;
+  opacity: 75%;
+}
+.item:hover{
+  opacity: 98%;
+  background-blend-mode: saturation;
 }
 .icon {
   color: rgb(223, 130, 36);

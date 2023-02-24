@@ -1,30 +1,45 @@
 .player-page{
-    margin-left: auto;
+    margin-inline: 2%;
     padding-left: auto;
-    display: flex;
-    justify-content: space-around;
+    display: flex; 
+    justify-content:space-around;
+    
 }
 
 .player{
-    display: flex;
-    padding-inline: auto;
+    padding-left: auto;
     width: 650px;
+    display: flex;
+}
+.player-container {
+    height: 590px;
 }
 .button1{
-    padding-left: .5rem;
-    position: relative;
+    max-height: fit-content;
+    
 }
 .back-button{
+    font-size: 13px;
+    height: fit-content;
+    width: fit-content;
     box-shadow: 1px 2px 5px rgb(151, 146, 141);
+    margin: auto;
+    text-align: center;
+    padding: 4px;
+    
+    
+    
 }
 
 .related-videos{
-    
-    padding-inline: auto;
+    padding-right: auto;
     width: fit-content;  
 }
 
 .comments{
     display: grid;
-    grid-column: auto;
+    padding-inline: 10px;
+    max-width: 550px;
+    
+
 }

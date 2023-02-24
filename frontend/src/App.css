@@ -6,6 +6,7 @@
   margin: 0;
   padding: 0;
   box-sizing: inherit;
+  position: relative;
 }
 
 html {
@@ -15,7 +16,6 @@ html {
   font-family: 'Monaco', 'Open Sans', 'Public Sans', 'Helvetica', 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', sans-serif;
   background: linear-gradient(silver, rgb(67, 70, 70), rgb(1, 1, 61), black) ;
   background-repeat: repeat;
-  
 }
 
 p {
@@ -37,13 +37,11 @@ button:hover {
   color: white;
   background-color: steelblue;
 }
-
 .container {
   margin: 0 auto;
-  max-width: 600px;
-  overflow: auto;
+  max-width: max-content;
+  overflow:auto;
   text-align: center;
-  
 }
 
 .form {

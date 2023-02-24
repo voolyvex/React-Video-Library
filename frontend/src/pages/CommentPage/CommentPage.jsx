@@ -3,6 +3,7 @@ import PostUserCommentForm from "../../components/Comments/PostUserCommentForm";
 import { useParams } from "react-router-dom";
 import DisplayCommentFeed from "../../components/Comments/DisplayCommentFeed";
 import axios from "axios";
+import '../../components/Comments/comment.css'
 
 
 
@@ -12,8 +13,9 @@ const CommentPage = () => {
 
 
   useEffect(() => {
+    console.log("useEffect triggered")
     getComments(videoId)
-    }, [videoId])
+    }, [])
 
     async function getComments(id) {
       try {
@@ -27,17 +29,10 @@ const CommentPage = () => {
 
   return (
     <div className="comments-container">
-      <h3>if logged you can leave a comment</h3>
-      {console.log(comments)}
+      
       <PostUserCommentForm />
-      <h3>and see the comments below</h3>
+      
       <DisplayCommentFeed comments={comments} />
-      {/* {videos &&
-        videos.map((video) => (
-          <p>
-            {video.items.snippet.title}
-          </p>
-        ))} */}
       
     </div>
   );

@@ -26,14 +26,14 @@ const SearchPage = (props) => {
 
     return (
         <div className="search-page">
-            <h1>Start your search here</h1>
+            <h1 className="search-title">Start your search here</h1>
             <div className="search-form-container">
                 <form onSubmit={(e) => handleSubmit(e)}>
                     <input className="search-form"
                         type='text'
                         onChange={(e) => setSearchTerm(e.target.value)}
                         value={searchTerm} required={true} />
-                    <button className="search-button" type='submit'><HiArrowNarrowRight className="arrow"/> </button>
+                    <button className="search-button" type='submit'><HiArrowNarrowRight /> </button>
                 </form>
             </div>
             <SearchFeed videos={videos} />

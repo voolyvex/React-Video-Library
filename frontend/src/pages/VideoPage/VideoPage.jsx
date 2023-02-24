@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useLayoutEffect } from 'react';
 import VideoPlayer from '../../components/VideoPlayer/VideoPlayer';
 import { useNavigate } from 'react-router-dom';
 import './VideoPage.css'
@@ -6,9 +6,11 @@ import RelatedVideos from '../RelatedVideos/RelatedVideos';
 import CommentPage from '../CommentPage/CommentPage';
 
 
-
-
 const VideoPage = () => {
+    useLayoutEffect(() => {
+        window.scrollTo(0, 0)
+    });
+
     const navigate = useNavigate();
 
     const handleClick = () => {
