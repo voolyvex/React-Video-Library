@@ -8,7 +8,7 @@ import CommentPage from '../CommentPage/CommentPage';
 
 const VideoPage = () => {
     useLayoutEffect(() => {
-        window.scrollTo(0, 0)
+        window.scrollTo(0, 0);
     });
 
     const navigate = useNavigate();

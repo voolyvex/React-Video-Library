@@ -6,34 +6,31 @@ import axios from "axios";
 import '../../components/Comments/comment.css'
 
 
-
 const CommentPage = () => {
   const [comments, setComments] = useState([]);
   const { videoId } = useParams();
 
 
   useEffect(() => {
-    console.log("useEffect triggered")
     getComments(videoId)
-    }, [])
+  }, [videoId])
 
-    async function getComments(id) {
-      try {
-          await axios.get(`http://127.0.0.1:8000/api/comments/?video_id=${id}`).then(response => setComments(response.data))
-          
-      } catch (error) {
-          console.log(error);
-      }
+  async function getComments(id) {
+    try {
+      await axios.get(`http://127.0.0.1:8000/api/comments/?video_id=${id}`).then(response => setComments(response.data))
+
+    } catch (error) {
+      console.log(error);
+    }
   };
-
 
   return (
     <div className="comments-container">
-      
+
       <PostUserCommentForm />
-      
+
       <DisplayCommentFeed comments={comments} />
-      
+
     </div>
   );
 };

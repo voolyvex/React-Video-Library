@@ -6,7 +6,7 @@ import './VideoPlayer.css'
 const VideoPlayer = (props) => {
 
     const { videoId = "vw1axveZo5k", title } = useParams();
-  
+
 
     return (
         <div className='player-container'>

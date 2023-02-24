@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
-import {KEY} from '../../localKey'
+import { KEY } from '../../localKey'
 import RelatedFeed from '../../components/RelatedFeed/RelatedFeed';
 import axios from 'axios';
 import '../VideoPage/VideoPage.css'

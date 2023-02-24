@@ -6,7 +6,7 @@ import { BsCaretRightFill } from "react-icons/bs";
 
 
 
-const SearchFeed = ({videos}) => {
+const SearchFeed = ({ videos }) => {
     const navigate = useNavigate();
 
     const handleClick = () => {
@@ -15,15 +15,15 @@ const SearchFeed = ({videos}) => {
 
     return (
         <div className='search-feed'>
-            
+
             {videos.map((video, index) =>
                 <Link to={`/video/${videos[index].id.videoId}/${videos[index].snippet.title}`}>
-                <div className='item' onClick={handleClick} title={video.snippet.title}>
-                    <img width='250px' src={video.snippet.thumbnails.medium.url} alt={video.snippet.description}/>
-                    <BsCaretRightFill className='icon'/>
-                    {video.snippet.title}
-    
-                </div>
+                    <div className='item' onClick={handleClick} title={video.snippet.title}>
+                        <img width='250px' src={video.snippet.thumbnails.medium.url} alt={video.snippet.description} />
+                        <BsCaretRightFill className='icon' />
+                        {video.snippet.title}
+
+                    </div>
                 </Link>
             )}
         </div>

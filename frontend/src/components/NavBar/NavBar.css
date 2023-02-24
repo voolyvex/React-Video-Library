@@ -1,16 +1,15 @@
 ul {
   display: flex;
-  justify-content:center;
+  justify-content: center;
   list-style-type: none;
   align-items: center;
 }
 
 li {
-  display:flex;
+  display: flex;
   padding-inline: 1rem;
   font-size: 1.25rem;
   text-decoration: none;
-  
 }
 
 .navBar {
@@ -45,8 +44,7 @@ li {
   justify-content: flex-end;
   font-size: 1rem;
 }
-.loggedin{
+.loggedin {
   padding-right: 0;
   text-align: right;
 }
-

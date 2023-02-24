@@ -25,8 +25,8 @@ const Navbar = () => {
         </Link>
         <li className="loggedin">
           {user ? (
-          <h6 style={{textDecoration: "none", color: "black", opacity: "66%", paddingright: "1em"}}>Logged in as <h4 style={{color: "darkblue"}}>{user.username}</h4>
-          </h6>):("")}
+            <h6 style={{ textDecoration: "none", color: "black", opacity: "66%", paddingright: "1em" }}>Logged in as <h4 style={{ color: "darkblue" }}>{user.username}</h4>
+            </h6>) : ("")}
         </li>
         <li>
           {user ? (
