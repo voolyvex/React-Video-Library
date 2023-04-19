@@ -1,6 +1,6 @@
 # React Video Library
 
-Full Stack React Django App Enables Users to Securely Login, Filter Content, Comment on, Reply to, and/or Like Videos in their Feed
+Full Stack React Django App Enables Users to Securely Login, Filter Content, and Comment on Videos in their Feed
 
 ## Notes
 
